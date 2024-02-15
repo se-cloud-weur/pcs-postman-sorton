@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "6847adb7-40ab-4ced-bebe-f4ab8adb1aaa",
+		"_postman_id": "1f2bb28e-323b-4690-a59d-2097925491e9",
 		"name": "Prisma Cloud",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3309461"
 	},
 	"item": [
 		{
@@ -4278,7 +4279,7 @@
 								}
 							],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				}
@@ -4943,8 +4944,54 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
+		},
+		{
+			"name": "Unified Vulnerability Explorer",
+			"item": [
+				{
+					"name": "Get Vulnerability Overview V2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-redlock-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{api-endpoint}}/uve/api/v2/dashboard/vulnerabilities/overview",
+							"protocol": "https",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"uve",
+								"api",
+								"v2",
+								"dashboard",
+								"vulnerabilities",
+								"overview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Prioritized Vulnerabilities V2",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Support App",
